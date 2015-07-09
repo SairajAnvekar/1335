@@ -7,10 +7,13 @@ public class Panel {
 	  int id;
 	  int setup=0;
      CandidateLamp lamp=new CandidateLamp();
-     CandidateButton CandidateButn=new   CandidateButton();
+     CandidateButton CandidateButn;
 	
  	public Panel(int size) {
 		this.id=id;
+		
+		CandidateButn=new   CandidateButton(size);
+		
 	}
 	
 

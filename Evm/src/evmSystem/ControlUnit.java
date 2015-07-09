@@ -5,21 +5,36 @@ import java.util.ArrayList;
 public class ControlUnit {
 	
 	
-	
-	ArrayList candidate=new ArrayList <Candidate>();
-	CandidateSetPanel setCanPanel=new CandidateSetPanel(); 
-	BallotUnit bUnit=new BallotUnit();
+	int candidateNo=0;
+	ArrayList<Candidate> candidate=new ArrayList <Candidate>();
+	//CandidateSetPanel setCanPanel=new CandidateSetPanel(); 
+	//BallotUnit bUnit=new BallotUnit();
 	
 	
 	public void  addCandidate()
 	{
-	candidate.add(new Candidate());
+		candidateNo++;
+	
+	candidate.add(new Candidate(candidateNo));
 	}
 	
 	
 	public void count(int index)
 	{
-				
+       candidate.get(index).count();
+		
+	}
+	
+	
+	public void ShowResult()
+	{
+		for(int i=0;i<candidate.size();i++)
+		{
+			
+			candidate.get(i).Show();
+		}
+		
+		
 	}
 	
 	
